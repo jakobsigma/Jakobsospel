@@ -658,14 +658,7 @@
     const navVideo = document.getElementById("navVideo");
 
     /* ===== Helpers ===== */
-    const displayName = f => String(f).replace(/^cl/,'').trim() || f;
 
-    function setActiveNav(el){
-      [navHome, navFav, navRecent, navTools].forEach(b => b.classList.remove("active"));
-      if(el) el.classList.add("active");
-    }
-
-    function unique(list){
       // Avoid duplicates in UI (you had cl1 twice etc.)
       const seen = new Set();
       return list.filter(x => (seen.has(x) ? false : (seen.add(x), true)));
